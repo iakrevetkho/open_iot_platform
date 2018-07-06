@@ -18,6 +18,7 @@ systemctl enable nodered.service
 echo "****************************************************************************************************************"
 echo "Start Node-Red service"
 sudo service nodered start
+sudo service nodered status
 
 echo "****************************************************************************************************************"
 echo "Get source EMQ"
