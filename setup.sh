@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+emq_version="2.3.10"
 
 echo "Install packages"
 apt-get update
@@ -13,10 +14,10 @@ cp nodered.service /lib/systemd/system/nodered.service
 systemctl enable nodered.service
 
 echo "Get source EMQ"
-file="emq-relx"
 if [ -f "$file" ]
 then
-	echo "$file found. Remove old."
-	rm -r $file
+	echo "emq-relx/ found. Remove old."
+	rm -r emq-relx
 fi
-git clone https://github.com/emqtt/emq-relx.git 2.3.10
+git clone https://github.com/emqtt/emq-relx.git $emq_version
+mv $emq_version emq-relx
