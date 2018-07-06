@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+
 echo "Install packages"
 sudo apt-get update
 sudo apt-get install make erlang rebar build-essential
