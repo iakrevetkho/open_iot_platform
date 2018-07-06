@@ -8,8 +8,7 @@ Documentation=http://nodered.org/docs/hardware/raspberrypi.html
 [Service]
 Type=simple
 # Run as normal pi user - feel free to change...
-# User=pi
-# Group=pi
+User=root
 Nice=5
 # uncomment the next line for a more verbose log output
 #Environment="NODE_RED_OPTIONS=-v"
