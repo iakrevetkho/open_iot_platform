@@ -2,7 +2,7 @@
 Description=Node-Red service
 
 [Service]
-ExecStart=nodered start
+ExecStart=/usr/local/bin/node-red
 
 [Install]
 WantedBy=multi-user.target
