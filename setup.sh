@@ -28,7 +28,7 @@ sudo service grafana-server start
 
 echo "****************************************************************************************************************"
 echo "Get source EMQ"
-if [ -f "$file" ]
+if [ -f "emq-relx/" ]
 then
 	echo "emq-relx/ found. Remove old."
 	rm -r emq-relx
