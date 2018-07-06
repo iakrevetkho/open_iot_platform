@@ -21,6 +21,14 @@ sudo service nodered start
 sudo service nodered status
 
 echo "****************************************************************************************************************"
+echo "Install Grafana service"
+apt-get install grafana
+echo "****************************************************************************************************************"
+echo "Start Grafana service"
+sudo service grafana-server start
+sudo service grafana-server status
+
+echo "****************************************************************************************************************"
 echo "Get source EMQ"
 if [ -f "$file" ]
 then
