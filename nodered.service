@@ -1,8 +1,8 @@
+[Unit]
+Description=Node-Red service
+
 [Service]
-Type=simple
-# Run as normal pi user - feel free to change...
-User={your_user}
-Group={your_user}
-WorkingDirectory=/home/{your_user}
-Nice=5
-Environment="PI_NODE_OPTIONS=--max_old_space_size=256"
+ExecStart=nodered start
+
+[Install]
+WantedBy=multi-user.target
