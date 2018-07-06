@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
 
-emq_version="2.3.10"
-
 echo "****************************************************************************************************************"
 echo "Install packages"
 apt-get update
@@ -33,5 +31,13 @@ then
 	echo "emq-relx/ found. Remove old."
 	rm -r emq-relx
 fi
-git clone https://github.com/emqtt/emq-relx.git $emq_version
-mv $emq_version emq-relx
+git clone https://github.com/emqtt/emq-relx.git
+
+echo "****************************************************************************************************************"
+echo "Modify emq-relx Makefile"
+#sudo sed -i 's/DEPS += \+/DEPS += emq_mongo_plugin /' emq-relx/Makefile
+
+#echo "DEPS += emq_mongo_plugin" >> emq-relx/Makefile
+#echo "dep_emq_mongo_plugin = https://github.com/iakrevetkho/emq_mqtt_to_mongodb.git" >> emq-relx/Makefile
+
+
